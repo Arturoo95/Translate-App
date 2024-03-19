@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Translator App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <h2 class="title">Translator App V.1.0</h2>
+        </div>
+        <div class="inputs">
+          <div class="input" id="inputFrom">
+            <select id="languagesFrom">
+              <option value="en-US">English 🇬🇧</option>
+              <option value="ru-RU">Russian 🇷🇺</option>
+              <option value="pl-PL">Polish 🇵🇱</option>
+              <option value="fr-FR">French 🇫🇷</option>
+              <option value="fi-FI">Finnish 🇫🇮</option>
+            </select>
+            <textarea
+              id="translateFromTXTArea"
+              autofocus
+              cols="30"
+              rows="10"
+              placeholder="Enter Text"
+            ></textarea>
+          </div>
+          <i class="fas fa-exchange-alt" id="icon"></i>
+          <div class="input" id="inputTo">
+            <select id="languagesTo">
+              <option value="en-US">English 🇬🇧</option>
+              <option value="ru-RU">Russian 🇷🇺</option>
+              <option value="pl-PL">Polish 🇵🇱</option>
+              <option value="fr-FR">French 🇫🇷</option>
+              <option value="fi-FI">Finnish 🇫🇮</option>
+            </select>
+            <i class="fas fa-close hidden" id="close"></i>
+            <textarea
+              id="translateToTXTArea"
+              cols="30"
+              rows="10"
+              placeholder="Translation"
+              disabled
+            ></textarea>
+          </div>
+        </div>
+        <div>
+          <button class="btn">Translate</button>
+          <button class="clear-btn">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-popup" onclick="closePopup()">&times;</span>
+        <p class="popup-message">Please, select two disctinct languages.</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

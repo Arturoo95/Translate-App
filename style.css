@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Encode Sans Expanded", sans-serif !important;
+  background: #fc354c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0abfbc,
+    #3585fc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #595959,
+    #929292
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Styles for the popup message */
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darken background */
+  z-index: 9999; /* Ensure popup is on top */
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.popup.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.popup-message {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.close-popup {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.card {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #ccc;
+  margin: 2rem;
+  font-size: 2rem;
+}
+
+.inputs {
+  display: flex;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  height: 50vh;
+  background-color: #2e2e2e;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  outline: none;
+}
+
+textarea:focus {
+  border: 1px solid rgb(70, 215, 238);
+}
+
+textarea::placeholder {
+  font-family: "Poppins", sans-serif !important;
+  color: grey;
+  font-size: 1.2rem;
+}
+.first_input {
+  position: relative;
+}
+
+#close {
+  width: auto;
+  border: 2px solid rgb(76, 76, 76);
+  background-color: rgba(0, 0, 0, 0.5); /* Darken background */
+  padding: 0.5rem;
+  padding-block: 0.2rem;
+  border-radius: 15px;
+  z-index: 1000;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#languagesFrom {
+  background: #2e2e2e;
+  width: 100%;
+  font-family: inherit !important;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+#languagesTo {
+  background: #2e2e2e;
+  width: 100%;
+  font-family: inherit !important;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+#translateToTXTArea {
+  background: #2e2e2e;
+  width: 100%;
+  font-family: inherit !important;
+  color: white;
+  font-size: 1.2rem;
+}
+
+#icon {
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  cursor: pointer;
+  margin: 1rem;
+  height: 100%;
+}
+
+.clear-btn {
+  margin-top: 50px;
+  padding: 10px;
+  background: #9f8875;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: 250px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
+.btn {
+  margin-top: 50px;
+  padding: 10px;
+  background: #9f8875;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: 250px;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: #9e816a;
+}
+
+footer h3 a:hover {
+  color: yellowgreen;
+}
+@media (max-width: 1200px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+  .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  textarea {
+    height: 18vh;
+  }
+  #icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+  }
+}
